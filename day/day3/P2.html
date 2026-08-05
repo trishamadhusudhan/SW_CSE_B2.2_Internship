@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMML forms 2</title>
+</head>
+<body>
+    <form action="" method="post">
+        <fieldset>
+            <!-- fieldset: lets us group related form controls -->
+            <legend>Personal Information</legend>
+            <p>
+                <input type="text" name="fullname" id="fullname"placeholder="Enter fullname"> 
+            </p>
+            <p>
+                <input type="email" name="email" id="email" placeholder="Enter email">
+            </p>
+            <p>
+                <input type="password" name="password" id="password" placeholder="Enter password">
+            </p>
+            <p>
+                <input type="number" name="age" id="age" placeholder="Enter age" min="1" max="100">
+            </p>
+            </fieldset>
+            <fieldset>
+                <legend>Preferences</legend>
+                <p>Gender:</p>
+                <p>
+                    <input type="checkbox" name="skills" id="html" value="html">
+                    <label for="html">html</label>
+                    <input type="checkbox" name="skills" id="css" value="css">
+                    <label for="css">css</label>
+                    <input type="checkbox" name="skills" id="js" value="js">
+                    <label for="JavaScript">JavaScript</label>
+                    <input type="checkbox" name="skills" id="ReactJS" value="reactJS">
+                    <label for="ReactJS">ReactJS</label>
+                </p>
+                <p>
+                    <label for="message">Message:</label><br>
+                    <textarea name="message" id="message" cols="30" rows="4"></textarea>
+                </p>
+            </fieldset>
+            <p>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </p>
+            </form> 
+</body>
+</html>
