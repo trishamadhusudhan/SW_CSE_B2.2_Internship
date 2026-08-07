@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping selector | Descendant selector | Child selector</title>
+    <style>
+        h1,h2,h3{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: crimson;
+        }
+        div p{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color:blueviolet;
+        }
+        /* Child selector */
+        ul > li{
+            list-style-type: square;
+            color: coral;
+        }
+    </style>
+</head>
+<body>
+    <h1>Frontend development</h1>
+    <h2>CSS</h2>
+    <h3>Selectors</h3>
+    <h4>Grouping Selector </h4>
+
+    <!-- Descendant selector -->
+    <div>
+        <p>This paragraph here is to depict the use of Descendant selector</p>
+    </div>
+    <p>This is a normal paragraph.</p>
+
+    <!-- Child selector -->
+     <p>Child selector</p>
+     <p>Selectors</p>
+     <ul>
+        <li>Element selector</li>
+        <li>Descendant Selector</li>
+        <li>Child Selector</li>
+        <li>Many more...</li>
+     </ul>
+</body>
+</html>
