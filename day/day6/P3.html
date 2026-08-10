@@ -108,6 +108,35 @@
         .placement-grid .item3{
             grid-column: 3 / span 2;
         }
+
+        /* 5. Align-self & justify-self */
+        .self-grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 120px);
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            background-color: darkcyan;
+        }
+        .self-grid .special{
+            align-self: start;
+            justify-self: end;
+            background-color: chartreuse;
+        }
+
+        .card-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(180px, 1fr));
+            gap:15px;
+            background-color: #867292;
+        }
+        .card{
+            background-color: aliceblue;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -157,6 +186,30 @@
             <div class="box">Item 4</div>
             <div class="box item3">Item5</div>
             <div class="box">Item 6</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Align-self & justify-self </h2>
+        <div class="self-grid">
+            <div class="box">Normal</div>
+            <div class="box special">Item 2</div>
+            <div class="box">Normal3</div>
+            <div class="box">Normal4</div>
+            <div class="box">Normal5</div>
+            <div class="box">Normal6</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Responsive grid</h2>
+        <div class="card-grid">
+            <div class="card">Card 1</div>
+            <div class="card">Card 2</div>
+            <div class="card">Card 3</div>
+            <div class="card">Card 4</div>
+            <div class="card">Card 5</div>
+            <div class="card">Card 6</div>
         </div>
     </section>
 </body>
