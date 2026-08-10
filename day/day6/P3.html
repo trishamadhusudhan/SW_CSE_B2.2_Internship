@@ -53,6 +53,43 @@
             width: 400px;
             height: 250px;
         }
+        .page{
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas: "header header" "sidebar main" "footer footer";
+            gap:10px;
+            background-color: burlywood;
+            min-height: 400px;
+        }
+        .header{
+            grid-area: header;
+            background-color: #867292;
+            color: aliceblue;
+            padding: 15px;
+            text-align: center;
+        }
+        .sidebar{
+            grid-area: sidebar;
+            background-color: #d04678;
+            color: aliceblue;
+            padding: 15px;
+            text-align: center;
+        }
+        .main{
+            grid-area: main;
+            background-color: #f1df40;
+            color: rgb(0, 0, 0);
+            padding: 15px;
+            text-align: center;
+        }
+        .footer{
+            grid-area: footer;
+            background-color: maroon;
+            color: azure;
+            padding: 10px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -77,6 +114,19 @@
             <div class="box">4</div>
             <div class="box">5</div>
             <div class="box">6</div>
+        </div>
+    </section>
+
+     <section>
+        <h2>3. Grid Template Areas (Header, sidebar, Main, Footer) </h2>
+        <div class="page">
+            <header class="header">
+                <div class="">Link1</div>
+                <div class="">Link2</div>
+            </header>
+            <aside class="sidebar">Sidebar</aside>
+            <main class="main">Main Content</main>
+            <footer class="footer">Footer</footer>
         </div>
     </section>
 </body>
