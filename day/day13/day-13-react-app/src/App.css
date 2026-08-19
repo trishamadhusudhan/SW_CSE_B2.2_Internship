@@ -182,3 +182,7 @@
     border-right-color: var(--border);
   }
 }
+.card{
+  width: 200px;
+  height: 450px;
+}
