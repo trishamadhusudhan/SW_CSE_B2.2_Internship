@@ -3,13 +3,16 @@ import { ProductCard } from "./components/P2";
 import headphones from "./assets/sony.jpg";
 import ButtonDemo from "./components/P3";
 import Counter from "./components/StateExampleOne";
+import ToggleText from "./components/StateExampleTwo";
 import "./App.css";
 
 function App() {
   return (
     <>
+      <ToggleText />
+
       <Counter />
-      
+
       <Welcome name="Trisha" />
 
       <ButtonDemo />
