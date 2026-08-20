@@ -8,6 +8,11 @@ import SimpleList from "./components/ListAndKeysOne";
 import UserListHook from "./components/HookOne";
 import ThemeProviderDemo from "./components/HookTwo";
 
+import SimpleNameForm from "./components/FormOne";
+import SignupForm from "./components/FormTwo";
+import ValidatedForm from "./components/FormThree";
+
+import GitHubProfile from "./components/GithubApi";
 function App() {
   return (
     <>
@@ -20,7 +25,13 @@ function App() {
       <SimpleList/>
 
       <UserListHook/> */}
-      <ThemeProviderDemo/>
+      {/* <ThemeProviderDemo/> */}
+
+      {/* <SimpleNameForm/> */}
+      {/* <SignupForm/> */}
+      {/* <ValidatedForm/> */}
+
+      <GitHubProfile username="trishamadhusudhan"/>
     </>
   )
 }
