@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trisha Madhusudhan | Portfolio</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!--  CSS  -->
+
+    <style>
+
+        /* -- BASIC RESET -- */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: "Poppins", sans-serif;
+
+            background: #fffdf2;
+
+            color: #292929;
+
+            line-height: 1.7;
+
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* -- COLORS -- */
+
+        :root {
+
+            --butter: #f7df6b;
+
+            --light-yellow: #fff8d7;
+
+            --cream: #fffdf2;
+
+            --dark: #292929;
+
+            --grey: #6e6b5e;
+
+            --white: #ffffff;
+
+            --border: #eadb91;
+
+        }
+
+        .navbar {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            height: 70px;
+
+            background: var(--dark);
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 8%;
+
+        }
+
+
+        .logo {
+
+            font-size: 25px;
+
+            font-weight: 700;
+
+        }
+
+
+        .logo span {
+
+            color: var(--butter);
+
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            gap: 35px;
+
+            list-style: none;
+
+        }
+
+
+        .nav-links a {
+
+            color: white;
+
+            font-size: 14px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .nav-links a:hover {
+
+            color: var(--butter);
+
+        }
+
+
+        /* -- HERO-- */
+
+        .hero {
+
+            min-height: 90vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 50px 20px;
+
+            background:
+
+                radial-gradient(
+                    circle at 15% 20%,
+                    rgba(255,255,255,0.6),
+                    transparent 25%
+                ),
+
+                radial-gradient(
+                    circle at 85% 80%,
+                    rgba(255,255,255,0.5),
+                    transparent 25%
+                ),
+
+                var(--butter);
+
+        }
+
+
+        .hero-content {
+
+            max-width: 850px;
+
+        }
+
+
+        .small-text {
+
+            font-size: 14px;
+
+            letter-spacing: 5px;
+
+            font-weight: 600;
+
+            color: #665a20;
+
+        }
+
+
+        .hero h1 {
+
+            font-size: clamp(45px, 8vw, 85px);
+
+            line-height: 1.1;
+
+            margin: 15px 0;
+
+            letter-spacing: -4px;
+
+        }
+
+
+        .hero h1 span {
+
+            display: block;
+
+        }
+
+
+        .hero h2 {
+
+            font-size: 20px;
+
+            font-weight: 500;
+
+            color: #5d552e;
+
+        }
+
+
+        .hero-description {
+
+            max-width: 620px;
+
+            margin: 20px auto;
+
+            color: #5e582e;
+
+        }
+
+
+        /* -- BUTTONS -- */
+
+        .hero-buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            margin-top: 30px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .btn {
+
+            padding: 12px 25px;
+
+            border-radius: 30px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+
+        }
+
+
+        .primary-btn {
+
+            background: var(--dark);
+
+            color: white;
+
+        }
+
+
+        .primary-btn:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+        }
+
+
+        .outline-btn {
+
+            border: 1px solid var(--dark);
+
+        }
+
+
+        .outline-btn:hover {
+
+            background: var(--dark);
+
+            color: white;
+
+        }
+
+
+        /* -- sections--  */
+
+        .section {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 100px 25px 30px;
+
+        }
+
+
+        .section-title {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .section-title span {
+
+            color: #9a8422;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+        }
+
+
+        .section-title h2 {
+
+            font-size: 35px;
+
+        }
+
+
+        /* -- about --*/
+
+        .about-box {
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 20px;
+
+            padding: 35px;
+
+            display: flex;
+
+            gap: 25px;
+
+            box-shadow: 0 10px 30px rgba(100,80,0,0.06);
+
+        }
+
+
+        .about-icon {
+
+            width: 55px;
+
+            height: 55px;
+
+            min-width: 55px;
+
+            background: var(--butter);
+
+            border-radius: 15px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 25px;
+
+        }
+
+
+        .about-box h3 {
+
+            font-size: 22px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .about-box p {
+
+            color: var(--grey);
+
+            margin-bottom: 12px;
+
+        }
+
+
+        /* -- skills -- */
+
+        .skills-container {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 18px;
+
+        }
+
+
+        .skill-card {
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 18px;
+
+            padding: 28px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .skill-card:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow: 0 12px 30px rgba(100,80,0,0.1);
+
+        }
+
+
+        .skill-number {
+
+            color: #a08a22;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+        }
+
+
+        .skill-card h3 {
+
+            margin: 12px 0 5px;
+
+            font-size: 20px;
+
+        }
+
+
+        .skill-card p {
+
+            color: var(--grey);
+
+            font-size: 13px;
+
+        }
+
+
+        /* -- projects --  */
+
+        .project-container {
+
+            display: grid;
+
+            gap: 20px;
+
+        }
+
+
+        .project-card {
+
+            display: flex;
+
+            gap: 25px;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 20px;
+
+            padding: 35px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .project-card:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 12px 30px rgba(100,80,0,0.1);
+
+        }
+
+
+        .project-number {
+
+            width: 65px;
+
+            height: 65px;
+
+            min-width: 65px;
+
+            border-radius: 15px;
+
+            background: var(--butter);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-weight: 700;
+
+        }
+
+
+        .project-category {
+
+            color: #9a8422;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .project-content h3 {
+
+            font-size: 23px;
+
+            margin: 5px 0;
+
+        }
+
+
+        .project-content p {
+
+            color: var(--grey);
+
+        }
+
+
+        .technologies {
+
+            display: flex;
+
+            gap: 8px;
+
+            margin-top: 15px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .technologies span {
+
+            background: var(--light-yellow);
+
+            border: 1px solid var(--border);
+
+            padding: 5px 12px;
+
+            border-radius: 20px;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+        }
+
+
+        /* -- contact -- */
+
+        .contact-container {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 20px;
+
+            padding: 40px;
+
+        }
+
+
+        .contact-intro h3 {
+
+            font-size: 28px;
+
+            line-height: 1.3;
+
+            margin: 10px 0;
+
+        }
+
+
+        .contact-intro p {
+
+            color: var(--grey);
+
+        }
+
+
+        .contact-links {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 15px;
+
+        }
+
+
+        .contact-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            padding: 15px;
+
+            background: var(--cream);
+
+            border: 1px solid var(--border);
+
+            border-radius: 13px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .contact-item:hover {
+
+            background: var(--light-yellow);
+
+            transform: translateX(5px);
+
+        }
+
+
+        .contact-icon {
+
+            width: 45px;
+
+            height: 45px;
+
+            min-width: 45px;
+
+            background: var(--butter);
+
+            border-radius: 12px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-weight: 700;
+
+        }
+
+
+        .contact-item small {
+
+            display: block;
+
+            color: var(--grey);
+
+            font-size: 11px;
+
+        }
+
+
+        .contact-item strong {
+
+            display: block;
+
+            font-size: 13px;
+
+        }
+
+
+        /* -- footer -- */
+
+        footer {
+
+            margin-top: 90px;
+
+            padding: 30px;
+
+            text-align: center;
+
+            background: var(--butter);
+
+            color: #51491f;
+
+            font-size: 13px;
+
+        }
+
+
+    
+        @media (max-width: 850px) {
+
+            .skills-container {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+
+            .contact-container {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .navbar {
+
+                padding: 0 5%;
+
+            }
+
+
+            .nav-links {
+
+                display: none;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 48px;
+
+                letter-spacing: -2px;
+
+            }
+
+
+            .hero h2 {
+
+                font-size: 17px;
+
+            }
+
+
+            .skills-container {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .about-box {
+
+                flex-direction: column;
+
+            }
+
+
+            .project-card {
+
+                flex-direction: column;
+
+            }
+
+
+            .contact-container {
+
+                padding: 25px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Trisha<span>.</span>
+        </div>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- home -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-text">
+                HELLO, I'M
+            </p>
+
+
+            <h1>
+                Trisha
+                <span>Madhusudhan</span>
+            </h1>
+
+
+            <h2>
+                Computer Science Engineering Student
+            </h2>
+
+
+            <p class="hero-description">
+
+                Passionate about technology, artificial intelligence,
+                cybersecurity and creating meaningful digital experiences.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#projects"
+                    class="btn primary-btn"
+                >
+                    View My Work
+                </a>
+
+
+                <a
+                    href="#contact"
+                    class="btn outline-btn"
+                >
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- about -->
+
+    <section id="about" class="section">
+
+        <div class="section-title">
+
+            <span>01</span>
+
+            <h2>
+                About Me
+            </h2>
+
+        </div>
+
+
+        <div class="about-box">
+
+            <div class="about-icon">
+                ✦
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Hello, I'm Trisha!
+                </h3>
+
+
+                <p>
+
+                    I am a Computer Science Engineering student who enjoys
+                    exploring technology and developing creative solutions
+                    to real-world problems.
+
+                </p>
+
+
+                <p>
+
+                    I am particularly interested in
+                    <strong>
+                        Artificial Intelligence, Cybersecurity,
+                        Software Development and Web Development.
+                    </strong>
+
+                </p>
+
+
+                <p>
+
+                    I enjoy learning new technologies, working on projects
+                    and continuously improving my programming and
+                    problem-solving skills.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- skills -->
+
+    <section id="skills" class="section">
+
+        <div class="section-title">
+
+            <span>02</span>
+
+            <h2>
+                My Skills
+            </h2>
+
+        </div>
+
+
+        <div class="skills-container">
+
+
+            <div class="skill-card">
+
+                <div class="skill-number">
+                    01
+                </div>
+
+                <h3>
+                    Java
+                </h3>
+
+                <p>
+                    Object-oriented programming,
+                    problem solving and application development.
+                </p>
+
+            </div>
+
+
+
+            <div class="skill-card">
+
+                <div class="skill-number">
+                    02
+                </div>
+
+                <h3>
+                    Python
+                </h3>
+
+                <p>
+                    Programming, automation and
+                    application development.
+                </p>
+
+            </div>
+
+
+
+            <div class="skill-card">
+
+                <div class="skill-number">
+                    03
+                </div>
+
+                <h3>
+                    C Programming
+                </h3>
+
+                <p>
+                    Programming fundamentals,
+                    data structures and algorithms.
+                </p>
+
+            </div>
+
+
+
+            <div class="skill-card">
+
+                <div class="skill-number">
+                    04
+                </div>
+
+                <h3>
+                    HTML & CSS
+                </h3>
+
+                <p>
+                    Creating clean and responsive
+                    websites.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- projects -->
+
+    <section id="projects" class="section">
+
+        <div class="section-title">
+
+            <span>03</span>
+
+            <h2>
+                My Projects
+            </h2>
+
+        </div>
+
+
+        <div class="project-container">
+
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    01
+                </div>
+
+
+                <div class="project-content">
+
+                    <p class="project-category">
+                        WEB DEVELOPMENT
+                    </p>
+
+
+                    <h3>
+                        Personal Portfolio Website
+                    </h3>
+
+
+                    <p>
+
+                        A responsive personal portfolio website designed
+                        using HTML and CSS to showcase my skills,
+                        projects and contact information.
+
+                    </p>
+
+
+                    <div class="technologies">
+
+                        <span>
+                            HTML
+                        </span>
+
+                        <span>
+                            CSS
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    02
+                </div>
+
+
+                <div class="project-content">
+
+                    <p class="project-category">
+                        ARTIFICIAL INTELLIGENCE
+                    </p>
+
+
+                    <h3>
+                        AI Based Project
+                    </h3>
+
+
+                    <p>
+
+                        An upcoming project exploring artificial intelligence
+                        and machine learning to create an intelligent
+                        technology solution.
+
+                    </p>
+
+
+                    <div class="technologies">
+
+                        <span>
+                            Python
+                        </span>
+
+                        <span>
+                            AI
+                        </span>
+
+                        <span>
+                            Machine Learning
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- contact -->
+
+    <section id="contact" class="section">
+
+        <div class="section-title">
+
+            <span>04</span>
+
+            <h2>
+                Contact Me
+            </h2>
+
+        </div>
+
+
+        <div class="contact-container">
+
+
+            <div class="contact-intro">
+
+                <p class="project-category">
+                    GET IN TOUCH
+                </p>
+
+
+                <h3>
+                    Let's build something
+                    interesting together.
+                </h3>
+
+
+                <p>
+
+                    Feel free to reach out if you'd like to connect,
+                    collaborate or discuss a project.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="contact-links">
+
+
+                <!-- EMAIL -->
+
+                <a
+                    href="mailto:trishamadhusudhan04@gmail.com"
+                    class="contact-item"
+                >
+
+                    <div class="contact-icon">
+                        ✉
+                    </div>
+
+
+                    <div>
+
+                        <small>
+                            Email
+                        </small>
+
+                        <strong>
+                            trishamadhusudhan04@gmail.com
+                        </strong>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- LINKEDIN -->
+
+                <a
+                    href="https://www.linkedin.com/in/trisha-madhusudhan"
+                    target="_blank"
+                    class="contact-item"
+                >
+
+                    <div class="contact-icon">
+                        in
+                    </div>
+
+
+                    <div>
+
+                        <small>
+                            LinkedIn
+                        </small>
+
+                        <strong>
+                            Trisha Madhusudhan
+                        </strong>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- footer -- >
+
+    <footer>
+
+        <p>
+            © 2026 Trisha Madhusudhan. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
